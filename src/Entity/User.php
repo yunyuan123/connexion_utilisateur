@@ -52,7 +52,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function __construct()
     {
         $this->addRole("ROLE_USER");
-        $this->addRole("ROLE_UTILISATERU");
+       
     }
 
     /**
