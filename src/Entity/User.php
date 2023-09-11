@@ -49,6 +49,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    public function __construct()
+    {
+        $this->addRole("ROLE_USER");
+        $this->addRole("ROLE_UTILISATERU");
+    }
+
     /**
      * A visual identifier that represents this user.
      *
@@ -78,6 +84,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    public function addRole(string $role){
+        array_push($this->roles, $role);
+    }
     /**
      * @see PasswordAuthenticatedUserInterface
      */
